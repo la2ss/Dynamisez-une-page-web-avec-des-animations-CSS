@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+
+
+$couleur-primaire:#9356DC;
+$couleur-secondaire:#FF79DA;
+$couleur-tertiaire:#99E2D0; 
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+    background: #ffffff;
+    
+  }
+
+
+
+   //------------------------header
+  header{
+    
+    width: 100%;
+    display: flex;
+    
+    border-bottom: 2px solid gray;
+    justify-content: center;
+
+
+    & a{
+      display: none;
+    }
+    & img{
+      width: 40%;
+     padding: 30px 0 15px 0 ;
+    }
+  }
+
+  //------------------------localisation
+  .localisation{
+    display: flex;
+    background-color: #eaeaea;
+    padding: 25px 0 20px 0 ;
+    justify-content: center;
+   
+    i{
+      padding: 0 10px 0 0;
+    }
+    span{
+      font-weight: 700;
+    }
+
+  }
+
+  //-------------------------reservation
+  .reservation{
+display: flex;
+flex-direction: column;
+text-align: center;
+padding: 20px 0 45px; 
+background-color: #f7f7f7;
+
+h1{
+   width: 60%;
+   margin: auto;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  }
+h2{
+  width: 85%;
+margin: auto;
+  font-size: 19px;
+}
+
+.bouton{
+  
+    width: 60%;
+    height: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 25px;
+    padding: 15px;
+    background: linear-gradient(#FF79DA , #9356DC );
+    box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
+
+}
+
+h1, h2, .bouton{
+  margin-bottom: 15px;
+}
+
+
+
+}
+
+//-------------------------fonctionnement
+.fonctionnement{
+  display: flex;
+  flex-direction: column;
+margin: 10px 0 20px 0;
+
+padding: 8px;
+justify-content: space-around;
+
+
+
+
+.bouton{
+  position: relative;
+  width: 90%;
+  height: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0  0 10px 12px;
+  text-align: center;
+  color: #000;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
+
+}
+.bouton:hover {
+  background: #f5edff;
+}
+ 
+
+.cercle{
+ 
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #FFF;
+  left: -8px;
+ 
+ 
+}
+
+}
+
+
+//-------------------------restaurant
+.restaurant{
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: auto;
+  padding: 8px;
+margin-bottom: 30px;
+background-color:#f7f7f7 ;
+
+
+.card-hebergement {
+  position: relative;
+  height: auto;
+  width: 90%;
+  margin-left: 15px;
+margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+ 
+
+ img {
+  height: 180px;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  object-fit : cover;
+ 
+}
+
+.btn_nouveau{
+  display: flex;
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  color: #347968;
+  background-color: #99E2D0;
+top: 15px;
+right: 15px;
+align-items: center;
+justify-content: center; 
+border-radius: 3px;
+
+}
+
+.card-text{
+
+  padding: 5px 0 15px 15px;
+
+  .card-title, .card-subtitle{
+    margin: 0;
+  }
+
+  .star{
+    position: absolute;
+   right: 15px;
+  bottom: 30px;
+  
+    i{
+   
+      background: #000;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+   
+    i:hover::before{
+      background-image: linear-gradient(#9356DC, #FF79DA);
+      font-weight: 900;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      transition: 0.9s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+
+}
+
+
+
+}
+
+}
+
+//-------------------footer
+footer{
+padding: 8px;
+  background-color: #353535;
+  text-align: left;
+  color: #FFF;
+
+ul{
+margin: 0;
+padding: 0;
+
+  li{
+  list-style: none;
+  font-size: small;
+  margin-bottom: 3px;
+
+  i{
+    width: 20px;
+  }
+}
+
+}
+a{
+  text-decoration: none;
+  color: #FFF
+}
+
+}
+
+
+/* media querie tablettes */
+@media screen and (min-width: 768px) {
+
+  .restaurant{
+      display: flex;
+      margin: auto;
+  }
+  .restaurant figure{
+      flex: 1;
+      min-width: 45%;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid green;
+  
+  }
+  
+  
+  
+  
+  }
+  
+  
+  /* media querie desktop */
+  @media screen and (min-width: 992px) {
+
+.fonctionnement{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 90%;
+
+
+
+}
+
+.restaurant{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+
+  
+  }
