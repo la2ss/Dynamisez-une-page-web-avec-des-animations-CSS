@@ -1,0 +1,164 @@
+
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+      background: #ffffff;
+      font-family: $font-global;
+      
+    }
+
+
+    .page{
+    
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  
+  
+      & a{
+        display: inline-block;
+   position: absolute;
+   left: 20px;
+   top: 30px;
+        align-items: center;
+        font-size: x-large;
+        color: #000;
+      }
+   
+      & img{
+        width: 40%;
+        
+      }
+    }
+    #img-food {
+	    width: 100%;
+	    max-height: 400px;
+	    object-fit: cover;
+	}
+
+
+    .menuP1{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: -60px;   
+padding-top: 15px;
+border-top-left-radius: 50px;
+border-top-right-radius: 50px;
+background-color: #f7f7f7;
+
+
+.underline {
+
+  background-image: linear-gradient(#99e2d0 0 0);
+  background-position: bottom center; /*Adjust the background-position to move the line*/
+  background-size: 60px 2px; /*Adjust the background size to control length and height*/
+  background-repeat: no-repeat;
+  padding-bottom: 4px; /* this can also control the position */
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.left {
+  background-position: bottom left;
+}
+
+.titre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  font-family: $font-titre;
+  margin: 0 10px;
+  
+
+  .fa-heart{
+    font-size: x-large;
+  padding-right: 30px;
+  }
+}
+
+.entrees, .plats, .dessert {
+  justify-content: space-between;
+
+}
+
+
+.entre1, .entre2, .entre3, .entre4, .plat1, .plat2, .plat3, .dessert1, .dessert2, .dessert3{
+ display: flex;
+ flex-wrap: wrap;
+  width: 90%;
+  height: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: small;
+  line-height: 20px;
+  margin: 0  0 10px 12px;
+  justify-content: space-between;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  padding: 15px 15px 15px 0px;
+  box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
+}
+.title{
+  width: 100%;
+  margin: 0;
+}
+.subtitle{
+display: flex;
+  font-weight: 400;
+  margin: 0;
+ // justify-content: space-around;
+}
+.money{
+//position: absolute;
+//right: 20px;
+font-weight: 700;
+}
+
+
+    }
+
+
+   
+
+    .special{
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      margin-top: -100px;   
+    padding-top: 15px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #f7f7f7;
+   
+    }
+
+    .commander{
+      display: flex;
+      justify-content: center;
+      width: 40%;
+      height: auto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 17px;
+      margin: 20px auto;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #e8e8e8;
+      border-radius: 25px;
+      padding: 15px;
+     background: linear-gradient(#FF79DA , #9356DC );
+      box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
+    }
+
+
+
+

@@ -1,0 +1,161 @@
+// animations progressive
+
+.entrees div {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.entrees>div:nth-child(1) {
+    animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.entrees>div:nth-child(2) {
+    animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.entrees>div:nth-child(3) {
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+.entrees>div:nth-child(4) {
+    animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+.plats div {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.plats>div:nth-child(1) {
+    animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.plats>div:nth-child(2) {
+    animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.plats>div:nth-child(3) {
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.dessert div {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.dessert>div:nth-child(1) {
+    animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.dessert>div:nth-child(2) {
+    animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.dessert>div:nth-child(3) {
+    animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+//-------------animation loader
+
+
+@keyframes spin-load{
+0%{
+    transform: scale(1);
+}
+100%{
+    transform: scale(0);
+}
+
+}
+
+
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+
+    /* ------------------------------media querie tablettes------------------------------ */
+    @media screen and (min-width: 768px){
+
+.entrees{
+    display: flex;
+   margin: auto;
+}
+
+        .entrees, .plats, .dessert{
+display: flex;
+flex-wrap: nowrap;
+
+
+
+           
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ------------------------------media querie desktop------------------------------ */
+  @media screen and (min-width: 992px) {
+
+
+    .entrees, .plats, .dessert{
+        display: flex;
+
+        .entre1, .entre2, .entre3{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+          
+        
+        }
+    
+    }
+
+.commander{
+    margin-top: 50px;
+    width: 33%;
+}
+
+
+
+
+    
+  }
+
+
+
+
+
+
+
+      
+     

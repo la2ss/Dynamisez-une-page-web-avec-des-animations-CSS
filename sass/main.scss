@@ -1,21 +1,54 @@
-@import url('https://fonts.googleapis.com/css2? family= Shrikhand & display=swap');
-@import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
 
 
-$couleur-primaire:#9356DC;
-$couleur-secondaire:#FF79DA;
-$couleur-tertiaire:#99E2D0; 
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import  url( ' https://fonts.googleapis.com/css2?family=Roboto&display=swap ' );
 
-*{
-  box-sizing: border-box;
-}
+// <style>
+//   @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+// </style>
+
+
+
+
+
+@import "./partials/variables";
+@import "./partials/page1";
+@import "./partials/menu1";
+@import "./partials/animations";
+
 
 body {
+  box-sizing: border-box;
   margin: 0;
     background: #ffffff;
+    font-family: $font-global;
     
   }
+//---------------------loader
+.loader{
+  display: flex;
+  position: fixed;
+ background: linear-gradient(#9356DC, #FF79DA);
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  opacity: 0.9;
+  animation: spin-load $animation-duration forwards;
+  align-items: center;
+  justify-content: center;
+  
+  .spinner{
+    height: 120px;
+    width: 120px;
+    border: 6px solid; 
+    border-color: white transparent white transparent;
+    border-radius: 50%;
+    animation: spin $animation-duration linear infinite;
+  }
+  
 
+
+}
 
 
    //------------------------header
@@ -37,20 +70,38 @@ body {
     }
   }
 
+
+
+
+
+
   //------------------------localisation
   .localisation{
     display: flex;
     background-color: #eaeaea;
-    padding: 25px 0 20px 0 ;
+    padding: 25px 0 0 0 ;
     justify-content: center;
+   align-items: center;
+
+    .location{
+      margin-left: 280px;
+      display: flex;
+  
+    }
    
     i{
-      padding: 0 10px 0 0;
+      padding: 10px 10px 0 0;
     }
-    span{
-      font-weight: 700;
-    }
+    input{
+      border: none;
+      background-color: transparent;
+      outline: none;
 
+
+    }
+    input::placeholder {
+      color: #000;
+    }
   }
 
   //-------------------------reservation
@@ -72,12 +123,14 @@ h1{
 h2{
   width: 85%;
 margin: auto;
-  font-size: 19px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #595959;
 }
 
 .bouton{
   
-    width: 60%;
+    width: 54%;
     height: auto;
     font-style: normal;
     font-weight: 700;
@@ -89,7 +142,8 @@ margin: auto;
     border: 1px solid #e8e8e8;
     border-radius: 25px;
     padding: 15px;
-    background: linear-gradient(#FF79DA , #9356DC );
+    
+   background: linear-gradient(#FF79DA , #9356DC );
     box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
 
 }
@@ -97,7 +151,6 @@ margin: auto;
 h1, h2, .bouton{
   margin-bottom: 15px;
 }
-
 
 
 }
@@ -124,16 +177,43 @@ justify-content: space-around;
   line-height: 20px;
   margin: 0  0 10px 12px;
   text-align: center;
-  color: #000;
+  color: #000000;
   background-color: #ffffff;
   border: 1px solid #e7e7e7;
   border-radius: 20px;
-  padding: 15px;
+  padding: 15px 15px 15px 0px;
   box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
+
+  i{
+    color: #7e7e7e;
+  }
+
+  .fa-mobile-screen-button, .fa-store, .icon-combi{
+ 
+   position: absolute;
+   left: 10%;
+   font-size: medium;
+  }
+
+
+
+  
+  .fonction1{
+    margin-left: 40px;
+  }
+  .fonction2{
+    margin-left: 25px;
+  }
+  .fonction3{
+    margin-left: 30px;
+  }
 
 }
 .bouton:hover {
   background: #f5edff;
+  i{
+    color: $couleur-primaire;
+  }
 }
  
 
@@ -143,7 +223,7 @@ justify-content: space-around;
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: #9356DC;
+  background-color: $couleur-primaire;
   color: #FFF;
   left: -8px;
  
@@ -174,6 +254,10 @@ margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
  
+  .redirection{
+    color: #000;
+    text-decoration: none;
+  }
 
  img {
   height: 180px;
@@ -188,7 +272,7 @@ margin-bottom: 20px;
   position: absolute;
   height: 30px;
   width: 80px;
-  color: #347968;
+  color: #139273;
   background-color: #99E2D0;
 top: 15px;
 right: 15px;
@@ -208,25 +292,10 @@ border-radius: 3px;
 
   .star{
     position: absolute;
-   right: 15px;
-  bottom: 30px;
-  
-    i{
-   
-      background: #000;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-   
-    i:hover::before{
-      background-image: linear-gradient(#9356DC, #FF79DA);
-      font-weight: 900;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      transition: 0.9s ease-in-out;
-      cursor: pointer;
-    }
+   right: 18px;
+  bottom: 25px;
+  font-size: x-large;
+
   }
 
 
@@ -238,8 +307,27 @@ border-radius: 3px;
 
 }
 
+
+.fa-heart{
+   
+  background: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-heart:hover::before{
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  font-weight: 900;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.9s ease-in-out;
+  cursor: pointer;
+}
+
 //-------------------footer
 footer{
+
 padding: 8px;
   background-color: #353535;
   text-align: left;
@@ -268,47 +356,312 @@ a{
 }
 
 
-/* media querie tablettes */
+/* ------------------------------media querie tablettes------------------------------ */
 @media screen and (min-width: 768px) {
+
+  header{
+    border-bottom: 100%;
+  }
+
+  .fonctionnement{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+ .bouton{
+  margin: 0  0 10px 12px;
+  width: 25%;
+  font-size: small;
+
+  .fa-mobile-screen-button, .fa-store, .icon-combi{
+ 
+    position: absolute;
+    left: 8%;
+    font-size: small;
+   }
+  .fonction1, .fonction2, .fonction3{
+    margin-left: 25px;
+    
+  }
+  
+ }
+    .titre{
+      width: 100%;
+    }
+  }
 
   .restaurant{
       display: flex;
-      margin: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+     // margin: auto;
+
+     .titre{
+      width: 100%;
+     }
+
+.card-hebergement{
+  height: auto;
+  width: 300px;
+}
+
+
   }
-  .restaurant figure{
-      flex: 1;
-      min-width: 45%;
-      margin: 10px;
-      padding: 10px;
-      border: 1px solid green;
+
+
+  footer{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+
+h3{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+   margin-bottom: 15px;
   
+}
+
+ul{
+  width: 100%;
+  display: flex;
+justify-content: space-around;
+margin-bottom: 15px;
+ 
+  li{
+    flex-direction: row;
+
+  }
+}
+
+
+
   }
   
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   }
+
+
+
   
   
-  /* media querie desktop */
+  /* ------------------------------media querie desktop------------------------------ */
   @media screen and (min-width: 992px) {
 
-.fonctionnement{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 90%;
+// body{
+//   position: relative;
+//   width: 1380px;
+//   margin: auto;
+//   display: grid;
+//    height: 100vh;
+//    background-color: #FFF;
+//   grid-template-areas:
 
+//   "header header localisation localisation "
+  
+//   "reservation reservation reservation reservation"
+//   "fonctionnement fonctionnement fonctionnement fonctionnement"
+//   "restaurant restaurant restaurant restaurant"
+//   "footer footer footer footer";
+      
+//       // "header header header header"
+//       // "localisation localisation localisation localisation"
+//       // "reservation reservation reservation reservation"
+//       // "fonctionnement fonctionnement fonctionnement fonctionnement"
+//       // "restaurant restaurant restaurant restaurant"
+//       // "footer footer footer footer";
+// }
+// header{
+//   grid-area: header;
+//   width: 100%;
+
+//   img{
+
+//     width: 100px;
+//     height: 100px;
+//    justify-content: start;
+//   }
+
+
+
+// }
+// .localisation{
+//   grid-area: localisation;
+
+// }
+
+// .reservation{
+//   grid-area: reservation;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+
+//   .bouton{
+//     width: 30%;
+//   }
+// }
+
+// .fonctionnement{
+//   grid-area: fonctionnement;
+//   display: grid;
+//   grid-template-columns: repeat(3, 33%);
+
+// .titre{
+//   display: none;
+// }
+
+// }
+
+
+
+
+
+
+
+
+
+// .restaurant{
+//   grid-area: restaurant;
+//   display: grid;
+//   grid-template-columns: repeat(2, 50%);
+//   grid-column-gap: 50%;
+
+//   height: auto;
+//   width: auto;
+
+//   .titre{
+//     display: none;
+//   }
+
+// }
+body{
+margin: 0 1.5%;
 
 
 }
-
-.restaurant{
+.nav{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  background: linear-gradient(#ffffff, #eaeaea);
 }
+
+header{
+
+  width: 33%;
+  border-bottom: none;
+}
+.localisation{
+  width: 33%;
+  justify-content: end;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+
+}
+
+ .reservation{
+ 
+   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .bouton{
+     width: 30%;
+   
+   }
+ }
+
+
+ .fonctionnement{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+.bouton{
+margin: 0  0 10px 12px;
+width: 20%;
+font-size: large;
+
+.fa-mobile-screen-button, .fa-store, .icon-combi{
+  font-size: large;
+}
+
+}
+  .titre{
+    width: 100%;
+  }
+}
+
+
+
+
+footer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  
+  h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+     margin-bottom: 15px;
+    
+  }
+  
+  ul{
+    width: 100%;
+    display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+   
+    li{
+      flex-direction: row;
+  
+    }
+  }
+  
+  
+  
+    }
+
+
+
+
+
+
+
+
+
+
 
 
   
   }
+  

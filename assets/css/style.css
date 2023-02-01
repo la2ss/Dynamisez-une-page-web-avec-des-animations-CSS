@@ -1,12 +1,409 @@
-@import url("https://fonts.googleapis.com/css2? family= Shrikhand & display=swap");
-@import url("https://fonts.googleapis.com/css2? family= Roboto & display=swap");
-* {
-  box-sizing: border-box;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url(" https://fonts.googleapis.com/css2?family=Roboto&display=swap ");
 body {
+  box-sizing: border-box;
   margin: 0;
   background: #ffffff;
+  font-family: "roboto", sans-serif;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.page a {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  align-items: center;
+  font-size: x-large;
+  color: #000;
+}
+.page img {
+  width: 40%;
+}
+
+#img-food {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.menuP1 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: -60px;
+  padding-top: 15px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #f7f7f7;
+}
+.menuP1 .underline {
+  background-image: linear-gradient(#99e2d0 0 0);
+  background-position: bottom center; /*Adjust the background-position to move the line*/
+  background-size: 60px 2px; /*Adjust the background size to control length and height*/
+  background-repeat: no-repeat;
+  padding-bottom: 4px; /* this can also control the position */
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menuP1 .left {
+  background-position: bottom left;
+}
+.menuP1 .titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  font-family: "Shrikhand", cursive;
+  margin: 0 10px;
+}
+.menuP1 .titre .fa-heart {
+  font-size: x-large;
+  padding-right: 30px;
+}
+.menuP1 .entrees, .menuP1 .plats, .menuP1 .dessert {
+  justify-content: space-between;
+}
+.menuP1 .entre1, .menuP1 .entre2, .menuP1 .entre3, .menuP1 .entre4, .menuP1 .plat1, .menuP1 .plat2, .menuP1 .plat3, .menuP1 .dessert1, .menuP1 .dessert2, .menuP1 .dessert3 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: small;
+  line-height: 20px;
+  margin: 0 0 10px 12px;
+  justify-content: space-between;
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  padding: 15px 15px 15px 0px;
+  box-shadow: 0 3px 10px #e7e7e7 0 0 0/50%;
+}
+.menuP1 .title {
+  width: 100%;
+  margin: 0;
+}
+.menuP1 .subtitle {
+  display: flex;
+  font-weight: 400;
+  margin: 0;
+}
+.menuP1 .money {
+  font-weight: 700;
+}
+
+.special {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: -100px;
+  padding-top: 15px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: #f7f7f7;
+}
+
+.commander {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  margin: 20px auto;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 25px;
+  padding: 15px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 3px 10px #e5e5e5 0 0 0/20%;
+}
+
+.photocontact {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* banner */
+/*--------------------*/
+.banner h2 {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  color: #000;
+  font-size: 50px;
+  background-color: transparent;
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+/*---------------------------------------------------------------------*/
+/* LAYOUT */
+/*---------------------------------------------------------------------*/
+.wrap {
+  width: 940px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* forms */
+/*--------------------*/
+fieldset {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  background-color: #fafafa;
+}
+
+label, input, select {
+  display: block;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+label.required:after {
+  content: " *";
+}
+
+textarea,
+input {
+  width: 395px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+textarea:hover,
+input:hover {
+  border-color: #ceced0;
+}
+
+textarea:focus,
+input:focus {
+  outline-color: #da5488;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 300px;
+  max-height: 600px;
+}
+
+::-webkit-input-placeholder {
+  color: #c8c9ca;
+}
+
+::-moz-placeholder {
+  color: #c8c9ca;
+}
+
+input[type=submit] {
+  width: initial;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  width: initial;
+  margin-right: 5px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bloc-1-2 {
+  width: 460px;
+}
+
+.bloc-2-3 {
+  width: 620px;
+}
+
+.bloc-1-3 {
+  width: 300px;
+}
+
+.gutter {
+  margin-right: 20px;
+}
+
+/* buttons */
+/*--------------------*/
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #D81C13;
+  padding: 0px 15px;
+  line-height: 2.5;
+  background-color: blue;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #D81C13;
+}
+
+.entrees div {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.entrees > div:nth-child(1) {
+  animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.entrees > div:nth-child(2) {
+  animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.entrees > div:nth-child(3) {
+  animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.entrees > div:nth-child(4) {
+  animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+.plats div {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.plats > div:nth-child(1) {
+  animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.plats > div:nth-child(2) {
+  animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.plats > div:nth-child(3) {
+  animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+.dessert div {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.dessert > div:nth-child(1) {
+  animation: apparition 0.8s 0.2s ease-out forwards;
+}
+
+.dessert > div:nth-child(2) {
+  animation: apparition 0.8s 0.4s ease-out forwards;
+}
+
+.dessert > div:nth-child(3) {
+  animation: apparition 0.8s 0.6s ease-out forwards;
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes spin-load {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* ------------------------------media querie tablettes------------------------------ */
+@media screen and (min-width: 768px) {
+  .entrees {
+    display: flex;
+    margin: auto;
+  }
+  .entrees, .plats, .dessert {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+/* ------------------------------media querie desktop------------------------------ */
+@media screen and (min-width: 992px) {
+  .entrees, .plats, .dessert {
+    display: flex;
+  }
+  .entrees .entre1, .entrees .entre2, .entrees .entre3, .plats .entre1, .plats .entre2, .plats .entre3, .dessert .entre1, .dessert .entre2, .dessert .entre3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .commander {
+    margin-top: 50px;
+    width: 33%;
+  }
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background: #ffffff;
+  font-family: "roboto", sans-serif;
+}
+
+.loader {
+  display: flex;
+  position: fixed;
+  background: linear-gradient(#9356DC, #FF79DA);
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  opacity: 0.9;
+  animation: spin-load 3s forwards;
+  align-items: center;
+  justify-content: center;
+}
+.loader .spinner {
+  height: 120px;
+  width: 120px;
+  border: 6px solid;
+  border-color: white transparent white transparent;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
 }
 
 header {
@@ -26,14 +423,24 @@ header img {
 .localisation {
   display: flex;
   background-color: #eaeaea;
-  padding: 25px 0 20px 0;
+  padding: 25px 0 0 0;
   justify-content: center;
+  align-items: center;
+}
+.localisation .location {
+  margin-left: 280px;
+  display: flex;
 }
 .localisation i {
-  padding: 0 10px 0 0;
+  padding: 10px 10px 0 0;
 }
-.localisation span {
-  font-weight: 700;
+.localisation input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.localisation input::placeholder {
+  color: #000;
 }
 
 .reservation {
@@ -52,10 +459,12 @@ header img {
 .reservation h2 {
   width: 85%;
   margin: auto;
-  font-size: 19px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #595959;
 }
 .reservation .bouton {
-  width: 60%;
+  width: 54%;
   height: auto;
   font-style: normal;
   font-weight: 700;
@@ -91,15 +500,35 @@ header img {
   line-height: 20px;
   margin: 0 0 10px 12px;
   text-align: center;
-  color: #000;
+  color: #000000;
   background-color: #ffffff;
   border: 1px solid #e7e7e7;
   border-radius: 20px;
-  padding: 15px;
+  padding: 15px 15px 15px 0px;
   box-shadow: 0 3px 10px #e7e7e7 0 0 0/50%;
+}
+.fonctionnement .bouton i {
+  color: #7e7e7e;
+}
+.fonctionnement .bouton .fa-mobile-screen-button, .fonctionnement .bouton .fa-store, .fonctionnement .bouton .icon-combi {
+  position: absolute;
+  left: 10%;
+  font-size: medium;
+}
+.fonctionnement .bouton .fonction1 {
+  margin-left: 40px;
+}
+.fonctionnement .bouton .fonction2 {
+  margin-left: 25px;
+}
+.fonctionnement .bouton .fonction3 {
+  margin-left: 30px;
 }
 .fonctionnement .bouton:hover {
   background: #f5edff;
+}
+.fonctionnement .bouton:hover i {
+  color: #9356DC;
 }
 .fonctionnement .cercle {
   position: absolute;
@@ -129,6 +558,10 @@ header img {
   border-radius: 20px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+.restaurant .card-hebergement .redirection {
+  color: #000;
+  text-decoration: none;
+}
 .restaurant .card-hebergement img {
   height: 180px;
   width: 100%;
@@ -140,7 +573,7 @@ header img {
   position: absolute;
   height: 30px;
   width: 80px;
-  color: #347968;
+  color: #139273;
   background-color: #99E2D0;
   top: 15px;
   right: 15px;
@@ -156,15 +589,18 @@ header img {
 }
 .restaurant .card-hebergement .card-text .star {
   position: absolute;
-  right: 15px;
-  bottom: 30px;
+  right: 18px;
+  bottom: 25px;
+  font-size: x-large;
 }
-.restaurant .card-hebergement .card-text .star i {
+
+.fa-heart {
   background: #000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant .card-hebergement .card-text .star i:hover::before {
+
+.fa-heart:hover::before {
   background-image: linear-gradient(#9356DC, #FF79DA);
   font-weight: 900;
   background-clip: text;
@@ -197,32 +633,131 @@ footer a {
   color: #FFF;
 }
 
-/* media querie tablettes */
+/* ------------------------------media querie tablettes------------------------------ */
 @media screen and (min-width: 768px) {
-  .restaurant {
-    display: flex;
-    margin: auto;
+  header {
+    border-bottom: 100%;
   }
-  .restaurant figure {
-    flex: 1;
-    min-width: 45%;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid green;
-  }
-}
-/* media querie desktop */
-@media screen and (min-width: 992px) {
   .fonctionnement {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: 90%;
+    flex-wrap: wrap;
+  }
+  .fonctionnement .bouton {
+    margin: 0 0 10px 12px;
+    width: 25%;
+    font-size: small;
+  }
+  .fonctionnement .bouton .fa-mobile-screen-button, .fonctionnement .bouton .fa-store, .fonctionnement .bouton .icon-combi {
+    position: absolute;
+    left: 8%;
+    font-size: small;
+  }
+  .fonctionnement .bouton .fonction1, .fonctionnement .bouton .fonction2, .fonctionnement .bouton .fonction3 {
+    margin-left: 25px;
+  }
+  .fonctionnement .titre {
+    width: 100%;
   }
   .restaurant {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurant .titre {
+    width: 100%;
+  }
+  .restaurant .card-hebergement {
+    height: auto;
+    width: 300px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  footer h3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+  footer ul li {
+    flex-direction: row;
+  }
+}
+/* ------------------------------media querie desktop------------------------------ */
+@media screen and (min-width: 992px) {
+  body {
+    margin: 0 1.5%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
+    background: linear-gradient(#ffffff, #eaeaea);
+  }
+  header {
+    width: 33%;
+    border-bottom: none;
+  }
+  .localisation {
+    width: 33%;
+    justify-content: end;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+  }
+  .reservation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .reservation .bouton {
+    width: 30%;
+  }
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .fonctionnement .bouton {
+    margin: 0 0 10px 12px;
+    width: 20%;
+    font-size: large;
+  }
+  .fonctionnement .bouton .fa-mobile-screen-button, .fonctionnement .bouton .fa-store, .fonctionnement .bouton .icon-combi {
+    font-size: large;
+  }
+  .fonctionnement .titre {
+    width: 100%;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  footer h3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+  footer ul li {
+    flex-direction: row;
   }
 }
 
