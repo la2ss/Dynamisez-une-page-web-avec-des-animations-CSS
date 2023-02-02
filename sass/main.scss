@@ -1,13 +1,5 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import  url( ' https://fonts.googleapis.com/css2?family=Roboto&display=swap ' );
-
-// <style>
-//   @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-// </style>
-
-
 
 
 
@@ -78,18 +70,20 @@ body {
   .localisation{
     display: flex;
     background-color: #eaeaea;
-    padding: 25px 0 0 0 ;
+    padding: 25px 0 20px 0 ;
     justify-content: center;
    align-items: center;
 
     .location{
-      margin-left: 280px;
+      //280
+      margin-left: 40px;
       display: flex;
   
     }
    
     i{
-      padding: 10px 10px 0 0;
+      //padding: 10px 10px 0 0;
+      padding: 0 10px 0 0;
     }
     input{
       border: none;
@@ -331,6 +325,10 @@ padding: 8px;
   background-color: #353535;
   text-align: left;
   color: #FFF;
+
+  h3{
+    font-family: $font-titre;
+  }
 
 ul{
 margin: 0;

@@ -277,16 +277,16 @@ header img {
 .localisation {
   display: flex;
   background-color: #eaeaea;
-  padding: 25px 0 0 0;
+  padding: 25px 0 20px 0;
   justify-content: center;
   align-items: center;
 }
 .localisation .location {
-  margin-left: 280px;
+  margin-left: 40px;
   display: flex;
 }
 .localisation i {
-  padding: 10px 10px 0 0;
+  padding: 0 10px 0 0;
 }
 .localisation input {
   border: none;
@@ -469,6 +469,9 @@ footer {
   background-color: #353535;
   text-align: left;
   color: #FFF;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
 }
 footer ul {
   margin: 0;
