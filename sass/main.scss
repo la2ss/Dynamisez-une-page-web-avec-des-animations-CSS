@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import  url( ' https://fonts.googleapis.com/css2?family=Roboto&display=swap ' );
+@import url(' https://fonts.googleapis.com/css2?family=Roboto&display=swap ');
 
 
 
@@ -8,18 +8,21 @@
 @import "./partials/animations";
 
 
+
+
 body {
   box-sizing: border-box;
   margin: 0;
-    background: #ffffff;
-    font-family: $font-global;
-    
-  }
+  background: #ffffff;
+  font-family: $font-global;
+
+}
+
 //---------------------loader
-.loader{
+.loader {
   display: flex;
   position: fixed;
- background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356DC, #FF79DA);
   width: 100%;
   height: 100vh;
   z-index: 5;
@@ -27,102 +30,106 @@ body {
   animation: spin-load $animation-duration forwards;
   align-items: center;
   justify-content: center;
-  
-  .spinner{
+
+  .spinner {
     height: 120px;
     width: 120px;
-    border: 6px solid; 
+    border: 6px solid;
     border-color: white transparent white transparent;
     border-radius: 50%;
     animation: spin $animation-duration linear infinite;
   }
-  
+
 
 
 }
 
 
-   //------------------------header
-  header{
-    
-    width: 100%;
-    display: flex;
-    
-    border-bottom: 2px solid gray;
-    justify-content: center;
+//------------------------header
+header {
+
+  width: 100%;
+  display: flex;
+
+  border-bottom: 2px solid gray;
+  justify-content: center;
 
 
-    & a{
-      display: none;
-    }
-    & img{
-      width: 40%;
-     padding: 30px 0 15px 0 ;
-    }
+  & a {
+    display: none;
   }
 
-
-
-
-
-
-  //------------------------localisation
-  .localisation{
-    display: flex;
-    background-color: #eaeaea;
-    padding: 25px 0 20px 0 ;
-    justify-content: center;
-   align-items: center;
-
-    .location{
-      //280
-      margin-left: 40px;
-      display: flex;
-  
-    }
-   
-    i{
-      //padding: 10px 10px 0 0;
-      padding: 0 10px 0 0;
-    }
-    input{
-      border: none;
-      background-color: transparent;
-      outline: none;
-
-
-    }
-    input::placeholder {
-      color: #000;
-    }
+  & img {
+    width: 40%;
+    padding: 30px 0 15px 0;
   }
-
-  //-------------------------reservation
-  .reservation{
-display: flex;
-flex-direction: column;
-text-align: center;
-padding: 20px 0 45px; 
-background-color: #f7f7f7;
-
-h1{
-   width: 60%;
-   margin: auto;
-
-  font-size: 24px;
-  font-weight: 700;
-
-  }
-h2{
-  width: 85%;
-margin: auto;
-  font-size: 17px;
-  font-weight: 400;
-  color: #595959;
 }
 
-.bouton{
-  
+
+
+
+
+
+//------------------------localisation
+.localisation {
+  display: flex;
+  background-color: #eaeaea;
+  padding: 25px 0 20px 0;
+  justify-content: center;
+  align-items: center;
+
+  .location {
+    //280
+    margin-left: 40px;
+    display: flex;
+
+  }
+
+  i {
+    //padding: 10px 10px 0 0;
+    padding: 0 10px 0 0;
+  }
+
+  input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+
+  }
+
+  input::placeholder {
+    color: #000;
+  }
+}
+
+//-------------------------reservation
+.reservation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0 45px;
+  background-color: #f7f7f7;
+
+  h1 {
+    width: 60%;
+    margin: auto;
+
+    font-size: 24px;
+    font-weight: 700;
+
+  }
+
+  h2 {
+    width: 85%;
+    margin: auto;
+    font-size: 17px;
+    font-weight: 400;
+    color: #595959;
+  }
+
+  .bouton {
+
     width: 54%;
     height: auto;
     font-style: normal;
@@ -135,220 +142,219 @@ margin: auto;
     border: 1px solid #e8e8e8;
     border-radius: 25px;
     padding: 15px;
-    
-   background: linear-gradient(#FF79DA , #9356DC );
+    background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
 
-}
+  }
 
-h1, h2, .bouton{
-  margin-bottom: 15px;
-}
+  .bouton:hover {
+    filter: brightness(1.2);
+  }
+
+  h1,
+  h2,
+  .bouton {
+    margin-bottom: 15px;
+  }
 
 
 }
 
 //-------------------------fonctionnement
-.fonctionnement{
+.fonctionnement {
   display: flex;
   flex-direction: column;
-margin: 10px 0 20px 0;
+  margin: 10px 0 20px 0;
 
-padding: 8px;
-justify-content: space-around;
-
-
+  padding: 8px;
+  justify-content: space-around;
 
 
-.bouton{
-  position: relative;
-  width: 90%;
-  height: auto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
-  margin: 0  0 10px 12px;
-  text-align: center;
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #e7e7e7;
-  border-radius: 20px;
-  padding: 15px 15px 15px 0px;
-  box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
 
-  i{
-    color: #7e7e7e;
+
+  .bouton {
+    position: relative;
+    width: 90%;
+    height: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    margin: 0 0 10px 12px;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 20px;
+    padding: 15px 15px 15px 0px;
+    box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
+
+    i {
+      color: #7e7e7e;
+    }
+
+    .fa-mobile-screen-button,
+    .fa-store,
+    .icon-combi {
+
+      position: absolute;
+      left: 10%;
+      font-size: medium;
+    }
+
+
+
+
+    .fonction1 {
+      margin-left: 40px;
+    }
+
+    .fonction2 {
+      margin-left: 25px;
+    }
+
+    .fonction3 {
+      margin-left: 30px;
+    }
+
   }
 
-  .fa-mobile-screen-button, .fa-store, .icon-combi{
- 
-   position: absolute;
-   left: 10%;
-   font-size: medium;
+  .bouton:hover {
+    background: #f5edff;
+
+    i {
+      color: $couleur-primaire;
+    }
   }
 
 
+  .cercle {
 
-  
-  .fonction1{
-    margin-left: 40px;
-  }
-  .fonction2{
-    margin-left: 25px;
-  }
-  .fonction3{
-    margin-left: 30px;
-  }
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $couleur-primaire;
+    color: #FFF;
+    left: -8px;
 
-}
-.bouton:hover {
-  background: #f5edff;
-  i{
-    color: $couleur-primaire;
-  }
-}
- 
 
-.cercle{
- 
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: $couleur-primaire;
-  color: #FFF;
-  left: -8px;
- 
- 
-}
+  }
 
 }
 
 
 //-------------------------restaurant
-.restaurant{
+.restaurant {
 
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-height: auto;
-  padding: 8px;
-margin-bottom: 30px;
-background-color:#f7f7f7 ;
-
-
-.card-hebergement {
-  position: relative;
-  height: auto;
-  width: 90%;
-  margin-left: 15px;
-margin-bottom: 20px;
-  border-radius: 20px;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
- 
-  .redirection{
-    color: #000;
-    text-decoration: none;
-  }
-
- img {
-  height: 180px;
-  width: 100%;
-  border-radius: 20px 20px 0px 0px;
-  object-fit : cover;
- 
-}
-
-.btn_nouveau{
   display: flex;
-  position: absolute;
-  height: 30px;
-  width: 80px;
-  color: #139273;
-  background-color: #99E2D0;
-top: 15px;
-right: 15px;
-align-items: center;
-justify-content: center; 
-border-radius: 3px;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
+  padding: 8px;
+  margin-bottom: 30px;
+  background-color: #f7f7f7;
 
-}
-
-.card-text{
-
-  padding: 5px 0 15px 15px;
-
-  .card-title, .card-subtitle{
-    margin: 0;
+  .titre {
+    padding-left: 12px;
   }
 
-  .star{
-    position: absolute;
-   right: 18px;
-  bottom: 25px;
-  font-size: x-large;
+  .card-restaurant {
+    position: relative;
+    height: auto;
+    width: 90%;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+
+    .redirection {
+      color: #000;
+      text-decoration: none;
+    }
+
+    img {
+      height: 180px;
+      width: 100%;
+      border-radius: 20px 20px 0px 0px;
+      object-fit: cover;
+
+    }
+
+    .btn_nouveau {
+      display: flex;
+      position: absolute;
+      height: 30px;
+      width: 80px;
+      color: #139273;
+      background-color: #99E2D0;
+      top: 15px;
+      right: 15px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+
+    }
+
+    .card-text {
+
+      padding: 5px 0 15px 15px;
+
+      .card-title,
+      .card-subtitle {
+        margin: 0;
+      }
+
+      .star {
+        position: absolute;
+        right: 18px;
+        bottom: 25px;
+        font-size: x-large;
+
+      }
+
+    }
 
   }
 
-
 }
 
 
 
-}
-
-}
-
-
-.fa-heart{
-   
-  background: #000;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.fa-heart:hover::before{
-  background-image: linear-gradient(#9356DC, #FF79DA);
-  font-weight: 900;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: 0.9s ease-in-out;
-  cursor: pointer;
-}
 
 //-------------------footer
-footer{
+footer {
 
-padding: 8px;
+  padding: 15px;
   background-color: #353535;
   text-align: left;
   color: #FFF;
 
-  h3{
+  h3 {
     font-family: $font-titre;
+    letter-spacing: .1rem;
   }
 
-ul{
-margin: 0;
-padding: 0;
+  ul {
+    margin: 0;
+    padding: 0;
 
-  li{
-  list-style: none;
-  font-size: small;
-  margin-bottom: 3px;
+    li {
+      list-style: none;
+      font-size: small;
+      margin-bottom: 3px;
 
-  i{
-    width: 20px;
+      i {
+        width: 20px;
+      }
+    }
+
   }
-}
 
-}
-a{
-  text-decoration: none;
-  color: #FFF
-}
+  a {
+    text-decoration: none;
+    color: #FFF
+  }
 
 }
 
@@ -356,309 +362,188 @@ a{
 /* ------------------------------media querie tablettes------------------------------ */
 @media screen and (min-width: 768px) {
 
-  header{
+  header {
     border-bottom: 100%;
   }
 
-  .fonctionnement{
+  .fonctionnement {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
- .bouton{
-  margin: 0  0 10px 12px;
-  width: 25%;
-  font-size: small;
+    .bouton {
+      margin: 0 0 10px 12px;
+      width: 25%;
+      font-size: small;
 
-  .fa-mobile-screen-button, .fa-store, .icon-combi{
- 
-    position: absolute;
-    left: 8%;
-    font-size: small;
-   }
-  .fonction1, .fonction2, .fonction3{
-    margin-left: 25px;
-    
-  }
-  
- }
-    .titre{
+      .fa-mobile-screen-button,
+      .fa-store,
+      .icon-combi {
+
+        position: absolute;
+        left: 8%;
+        font-size: small;
+      }
+
+      .fonction1,
+      .fonction2,
+      .fonction3 {
+        margin-left: 25px;
+
+      }
+
+    }
+
+    .titre {
       width: 100%;
     }
   }
 
-  .restaurant{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-     // margin: auto;
-
-     .titre{
-      width: 100%;
-     }
-
-.card-hebergement{
-  height: auto;
-  width: 300px;
-}
-
-
-  }
-
-
-  footer{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-
-
-h3{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-   margin-bottom: 15px;
-  
-}
-
-ul{
-  width: 100%;
-  display: flex;
-justify-content: space-around;
-margin-bottom: 15px;
- 
-  li{
+  .restaurant {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
-  }
-}
 
-
-
-  }
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  }
-
-
-
-  
-  
-  /* ------------------------------media querie desktop------------------------------ */
-  @media screen and (min-width: 992px) {
-
-// body{
-//   position: relative;
-//   width: 1380px;
-//   margin: auto;
-//   display: grid;
-//    height: 100vh;
-//    background-color: #FFF;
-//   grid-template-areas:
-
-//   "header header localisation localisation "
-  
-//   "reservation reservation reservation reservation"
-//   "fonctionnement fonctionnement fonctionnement fonctionnement"
-//   "restaurant restaurant restaurant restaurant"
-//   "footer footer footer footer";
-      
-//       // "header header header header"
-//       // "localisation localisation localisation localisation"
-//       // "reservation reservation reservation reservation"
-//       // "fonctionnement fonctionnement fonctionnement fonctionnement"
-//       // "restaurant restaurant restaurant restaurant"
-//       // "footer footer footer footer";
-// }
-// header{
-//   grid-area: header;
-//   width: 100%;
-
-//   img{
-
-//     width: 100px;
-//     height: 100px;
-//    justify-content: start;
-//   }
-
-
-
-// }
-// .localisation{
-//   grid-area: localisation;
-
-// }
-
-// .reservation{
-//   grid-area: reservation;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-
-//   .bouton{
-//     width: 30%;
-//   }
-// }
-
-// .fonctionnement{
-//   grid-area: fonctionnement;
-//   display: grid;
-//   grid-template-columns: repeat(3, 33%);
-
-// .titre{
-//   display: none;
-// }
-
-// }
-
-
-
-
-
-
-
-
-
-// .restaurant{
-//   grid-area: restaurant;
-//   display: grid;
-//   grid-template-columns: repeat(2, 50%);
-//   grid-column-gap: 50%;
-
-//   height: auto;
-//   width: auto;
-
-//   .titre{
-//     display: none;
-//   }
-
-// }
-body{
-margin: 0 1.5%;
-
-
-}
-.nav{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background: linear-gradient(#ffffff, #eaeaea);
-}
-
-header{
-
-  width: 33%;
-  border-bottom: none;
-}
-.localisation{
-  width: 33%;
-  justify-content: end;
-  align-items: flex-end;
-  position: absolute;
-  right: 0;
-  background-color: transparent;
-
-}
-
- .reservation{
- 
-   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  .bouton{
-     width: 30%;
-   
-   }
- }
-
-
- .fonctionnement{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-.bouton{
-margin: 0  0 10px 12px;
-width: 20%;
-font-size: large;
-
-.fa-mobile-screen-button, .fa-store, .icon-combi{
-  font-size: large;
-}
-
-}
-  .titre{
-    width: 100%;
-  }
-}
-
-
-
-
-footer{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  
-  
-  h3{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-     margin-bottom: 15px;
-    
-  }
-  
-  ul{
-    width: 100%;
-    display: flex;
-  justify-content: space-around;
-  margin-bottom: 15px;
-   
-    li{
-      flex-direction: row;
-  
+    .titre {
+      width: 100%;
     }
-  }
-  
-  
-  
+
+    .card-restaurant {
+      height: auto;
+      width: 300px;
     }
 
 
-
-
-
-
-
-
-
-
-
-
-  
   }
-  
+
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    h3 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+
+      li {
+        flex-direction: row;
+
+      }
+    }
+
+
+  }
+
+}
+
+
+
+/* ------------------------------media querie desktop------------------------------ */
+@media screen and (min-width: 992px) {
+
+  body {
+    margin: 0 1.5%;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: linear-gradient(#ffffff, #eaeaea);
+  }
+
+  header {
+
+    width: 33%;
+    border-bottom: none;
+  }
+
+  .localisation {
+    width: 33%;
+    justify-content: end;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+  }
+
+  .reservation {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    .bouton {
+      width: 30%;
+    }
+  }
+
+
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .bouton {
+      margin: 0 0 10px 12px;
+      width: 20%;
+      font-size: large;
+
+      .fa-mobile-screen-button,
+      .fa-store,
+      .icon-combi {
+        font-size: large;
+      }
+
+    }
+
+    .titre {
+      width: 100%;
+    }
+  }
+
+
+
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+    h3 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+
+    }
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+
+      li {
+        flex-direction: row;
+
+      }
+    }
+
+  }
+
+}

@@ -1,67 +1,5 @@
-// animations progressive
 
-.entrees div {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.entrees>div:nth-child(1) {
-    animation: apparition 0.8s 0.2s ease-out forwards;
-}
-
-.entrees>div:nth-child(2) {
-    animation: apparition 0.8s 0.4s ease-out forwards;
-}
-
-.entrees>div:nth-child(3) {
-    animation: apparition 0.8s 0.6s ease-out forwards;
-}
-.entrees>div:nth-child(4) {
-    animation: apparition 0.8s 0.8s ease-out forwards;
-}
-
-.plats div {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.plats>div:nth-child(1) {
-    animation: apparition 0.8s 0.2s ease-out forwards;
-}
-
-.plats>div:nth-child(2) {
-    animation: apparition 0.8s 0.4s ease-out forwards;
-}
-
-.plats>div:nth-child(3) {
-    animation: apparition 0.8s 0.6s ease-out forwards;
-}
-
-.dessert div {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.dessert>div:nth-child(1) {
-    animation: apparition 0.8s 0.2s ease-out forwards;
-}
-
-.dessert>div:nth-child(2) {
-    animation: apparition 0.8s 0.4s ease-out forwards;
-}
-
-.dessert>div:nth-child(3) {
-    animation: apparition 0.8s 0.6s ease-out forwards;
-}
-
-@keyframes apparition {
-    100% {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-//-------------animation loader
+//--------------------------------------animation loader
 
 
 @keyframes spin-load{
@@ -81,43 +19,94 @@
     }
   }
 
+  @keyframes rotate{
+    to{
+    transform: rotate(360deg);
+    }
+  
+  }
+
+
+
+//-------------------------------------- animations du coeur
+.fa-heart{
+   
+    background: #000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .fa-heart:hover::before{
+    background-image: linear-gradient(#9356DC, #FF79DA);
+    font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 0.9s ease-in-out;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------- menu apparition progressive
+$total: 9;
+
+.card-body {
+    opacity: 0;
+    animation-name: cascade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-direction: alternate;
+  
+  }
+  
+  @for $i from 1 through $total {
+    .card-menu:nth-child(#{$i}) {
+      animation-delay: $i * 0.3s;
+    }
+  }
+  
+  @keyframes cascade {
+    to {
+      transform: translate(0, -15px);
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
     /* ------------------------------media querie tablettes------------------------------ */
     @media screen and (min-width: 768px){
 
-.entrees{
-    display: flex;
-   margin: auto;
-}
-
-        .entrees, .plats, .dessert{
-display: flex;
-flex-wrap: nowrap;
-
-
-
-           
-        }
-
-
-
-
-
-
 
 
 
 
     }
-
-
-
-
-
-
-
 
 
 
@@ -127,22 +116,11 @@ flex-wrap: nowrap;
   @media screen and (min-width: 992px) {
 
 
-    .entrees, .plats, .dessert{
-        display: flex;
 
-        .entre1, .entre2, .entre3{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-          
-        
-        }
-    
-    }
 
 .commander{
     margin-top: 50px;
-    width: 33%;
+    width: 15%;
 }
 
 
@@ -151,11 +129,3 @@ flex-wrap: nowrap;
     
   }
 
-
-
-
-
-
-
-      
-     
