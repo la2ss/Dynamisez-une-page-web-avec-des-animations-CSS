@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-<<<<<<< HEAD
-@import url(' https://fonts.googleapis.com/css2?family=Roboto&display=swap ');
-=======
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
->>>>>>> developpement
 
 
 
@@ -147,11 +143,7 @@ header {
     border-radius: 25px;
     padding: 15px;
     background: linear-gradient(#FF79DA, #9356DC);
-<<<<<<< HEAD
-    box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
-=======
     box-shadow: 1px 3px 30px -3px #e5e5e5;
->>>>>>> developpement
 
   }
 
@@ -195,11 +187,7 @@ header {
     border: 1px solid #e7e7e7;
     border-radius: 20px;
     padding: 15px 15px 15px 0px;
-<<<<<<< HEAD
-    box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
-=======
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
->>>>>>> developpement
 
     i {
       color: #7e7e7e;
@@ -374,13 +362,6 @@ footer {
 /* ------------------------------media querie tablettes------------------------------ */
 @media screen and (min-width: 768px) {
 
-<<<<<<< HEAD
-  header {
-    border-bottom: 100%;
-  }
-
-=======
->>>>>>> developpement
   .fonctionnement {
     display: flex;
     flex-direction: row;
