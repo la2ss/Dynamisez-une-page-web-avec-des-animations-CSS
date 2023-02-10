@@ -25,6 +25,108 @@ body {
 
   & img {
     width: 40%;
+  }
+}
+
+    #img-food {
+	    width: 100%;
+	    max-height: 400px;
+	    object-fit: cover;
+	}
+
+  .commander{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 20px auto;
+    text-align: center;
+    color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 25px;
+    padding: 15px;
+   background: linear-gradient(#FF79DA , #9356DC );
+    box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
+    cursor: pointer;
+  }
+
+  .commander:hover{
+    filter: brightness(1.2);
+  }
+
+
+#template{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  height: auto;
+  background: #F2F2F2;
+  width: 100%;
+  position: relative;
+  margin-top: -40px;
+
+  h3 {
+      font-weight: 100;
+      margin: 0px 0px 25px 10px;
+
+  }
+
+  article{
+      position: relative;
+      h3::after {
+          content: "";
+          position: absolute;
+          left: 10px;
+          top: 23px;
+          width: 56px;
+          border-bottom: 3px solid #99E2D0;
+      }
+  } 
+
+  h2 {
+      font-family: $font-titre;
+  }
+
+  .card-body {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 10px;
+      max-width: 1080px;
+
+      h3 {
+          min-width: 150px;
+          position: relative;
+          padding: 8px;
+      }
+
+  }
+
+  .card-header {
+      // display: flex;
+      // justify-content: space-around;
+      // padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: large;
+      font-family: $font-titre;
+      margin: 0 10px;
+  }
+
+  .card-header h2,
+  i {
+    font-size: x-large;
+      margin-left: 15px;
+      
+  }
+
 
   }
 }
@@ -49,8 +151,10 @@ body {
   border: 1px solid #e8e8e8;
   border-radius: 25px;
   padding: 15px;
+
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 3px 10px #e5e5e5(0, 0, 0,  0.2);
+
   cursor: pointer;
 }
 
@@ -77,7 +181,10 @@ body {
     font-weight: 100;
     margin: 0px 0px 25px 10px;
 
+
   }
+
+
 
   article {
     position: relative;
@@ -92,7 +199,10 @@ body {
     }
   }
 
-  h2 {
+
+
+h2 {
+
     font-family: $font-titre;
   }
 
@@ -111,6 +221,7 @@ body {
   }
 
   .card-header {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,24 +234,22 @@ body {
   i {
     font-size: x-large;
     margin-left: 15px;
-
-  }
+    
+}
 
 
 
   .card-price {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
   }
 
   .card-price span {
-    font-weight: bold;
+      font-weight: bold;
   }
 
 
-
-}
 
 
 
@@ -152,5 +261,67 @@ body {
     width: 15%;
   }
 
+
+/*--------- Animation Menu Animation Checking  -------*/
+
+.card-main {
+  display: flex;
+  min-width: 350px;
+  margin: 0px 10px 10px 0px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 5%);
+  background: #FFFFFF;
+  overflow: hidden;
+
+  &>.card-price {
+    align-items: center;
+  }
+
+  &:hover>.box {
+    width: 5em;
+
+    .check>i {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.card-menu {
+  flex-grow: 1;
+  width: 10em;
+  cursor: pointer;
+  padding: 5px;
+
+  p,
+  h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.card-price {
+  width: 2em;
+}
+
+.box {
+  display: flex;
+  width: 0;
+  background-color: #99E2D0;
+  transition: all 1s;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  .check {
+    margin: auto;
+    color: white;
+    background-color: #99E2D0;
+
+    i {
+      transition: all 0.4s;
+      transition-timing-function: ease-in-out;
+    }
+  }
 
 }

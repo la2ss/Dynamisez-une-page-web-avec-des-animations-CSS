@@ -3,6 +3,7 @@
 
 
 
+
 @import "./partials/variables";
 @import "./partials/page1";
 @import "./partials/animations";
@@ -144,6 +145,8 @@ header {
     background: linear-gradient(#FF79DA, #9356DC);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+
+
   }
 
   .bouton:hover {
@@ -188,6 +191,9 @@ header {
     padding: 15px 15px 15px 0px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+
+
+
 
     i {
       color: #7e7e7e;
