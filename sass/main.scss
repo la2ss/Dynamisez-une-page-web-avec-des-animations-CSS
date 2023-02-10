@@ -139,12 +139,11 @@ header {
     margin: auto;
     text-align: center;
     color: #ffffff;
-    border: 1px solid #e8e8e8;
     border-radius: 25px;
     padding: 15px;
     background: linear-gradient(#FF79DA, #9356DC);
-    box-shadow: 0 3px 10px #e5e5e5(0 0 0 / 20%);
-
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   .bouton:hover {
@@ -187,7 +186,8 @@ header {
     border: 1px solid #e7e7e7;
     border-radius: 20px;
     padding: 15px 15px 15px 0px;
-    box-shadow: 0 3px 10px #e7e7e7(0 0 0 / 50%);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 
     i {
       color: #7e7e7e;
@@ -266,7 +266,7 @@ header {
     margin-left: 15px;
     margin-bottom: 20px;
     border-radius: 20px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 
     .redirection {
       color: #000;
@@ -362,9 +362,6 @@ footer {
 /* ------------------------------media querie tablettes------------------------------ */
 @media screen and (min-width: 768px) {
 
-  header {
-    border-bottom: 100%;
-  }
 
   .fonctionnement {
     display: flex;
